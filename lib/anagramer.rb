@@ -1,6 +1,6 @@
 class String
   define_method(:anagramer) do |compare_to|
-    is_valid = false
+
     source_word = self
 
     if source_word.length == compare_to.length
