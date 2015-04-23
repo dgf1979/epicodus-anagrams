@@ -6,8 +6,8 @@ class String
 
     if source_word.length == compare_to.length
 
-      source_letters = source_word.split("").sort!()
-      compare_letters = compare_to.split("").sort!()
+      source_letters = source_word.downcase().split("").sort!()
+      compare_letters = compare_to.downcase().split("").sort!()
 
       if source_letters == compare_letters
         is_valid = true
