@@ -14,4 +14,8 @@ describe('String#anagramer') do
   it('makes sure a valid string and anagram return true') do
     expect(("fox").anagramer("fxo")).to(eq(true))
   end
+
+  it('makes sure input is case-insensitive') do
+    expect(("FOX").anagramer("fxo")).to(eq(true))
+  end
 end
