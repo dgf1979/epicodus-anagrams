@@ -1,4 +1,21 @@
 class String
+  #method to take a list of words and check for valid anagrams
+  define_method(:anagramer) do |word_list|
+      words_to_compare = word_list.split(" ")
+      results = []
+
+      words_to_compare.each do |word|
+        if self.compare(word)
+          results.push("#{word}: yes")
+        else
+          results.push("#{word}: no")
+        end
+      end
+
+      results.join("; ")
+  end
+
+  #comparison method
   define_method(:compare) do |compare_to|
     source_word = self
 
@@ -19,7 +36,4 @@ class String
 
     is_valid
   end
-
-  
-
 end

@@ -19,4 +19,8 @@ describe('String#anagramer') do
     expect(("FOX5").compare("fxo5")).to(eq(true))
   end
 
+  it('accepts a list of space-delimited strings and returns a list of true false results') do
+    expect(("race").anagramer("acre care rrrr")).to(eq("acre: yes; care: yes; rrrr: no"))
+  end
+
 end
